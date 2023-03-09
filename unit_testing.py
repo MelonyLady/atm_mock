@@ -12,7 +12,6 @@ class TestWithdraw(TestCase):
             updated_balance = withdrawal(starting_balance=100)
             self.assertEqual(updated_balance, 70)
 
-
     def test_withdraw_negative_amount(self):
         with mock.patch("builtins.input", side_effect=["-20"]):
             with self.assertRaises(ValueError):
